@@ -21,10 +21,10 @@ __author__ = 'px'
 
 """
 
+import abc
 
-class CarBase:
-    """ 此类应该被设计成基类，只能被继承，不能单独实例化"""
-    """ TODO """
+
+class CarBase(abc.ABC):
     def __init__(self, name):
         self.name = name
 
@@ -75,4 +75,3 @@ if __name__ == "__main__":
     car = car_factory.create("Toyota")
     car.print_name()
 
-    
