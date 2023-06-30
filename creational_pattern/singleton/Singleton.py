@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 __author__ = 'px'
 
+""" 单实例模式（Singleton）"""
+
 
 class Singleton:
     _instance = None

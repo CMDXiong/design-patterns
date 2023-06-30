@@ -5,7 +5,7 @@ __author__ = 'px'
 class Singleton(type):
     def __init__(cls, name, bases, dic):
         """
-        我们知道元类(Singleton)生成的实例是一个类(Foo),
+        我们知道元类(singleton)生成的实例是一个类(Foo),
         而这里我们仅仅需要对这个实例(Foo)增加一个属性(__instance)来判断和保存生成的单例。
         想想也知道为一个类添加一个属性当然是在__init__中实现了
         """
