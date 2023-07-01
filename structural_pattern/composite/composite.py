@@ -16,16 +16,13 @@ __author__ = 'px'
 import abc
 
 
-class CompositeBase:
-    @abc.abstractmethod
+class CompositeBase(abc.ABC):
     def get_parent(self):
         pass
 
-    @abc.abstractmethod
     def get_root(self):
         pass
 
-    @abc.abstractmethod
     def is_leaf(self):
         return True
 
@@ -40,8 +37,26 @@ class CompositeBase:
 
 
 class Node(CompositeBase):
+    def __init__(self):
+        self.children = []
+
+    def get_parent(self):
+        pass
+
+    def get_root(self):
+        pass
+
     def is_leaf(self):
         return False
+
+    def add_child(self, composite):
+        pass
+
+    def remove(self, idx):
+        pass
+
+    def get_child(self):
+        pass
 
 
 class Leaf(CompositeBase):

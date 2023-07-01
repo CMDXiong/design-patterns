@@ -9,22 +9,28 @@ __author__ = 'px'
 import abc
 
 
-class CompositeBase:
-    @abc.abstractmethod
+class CompositeBase(abc.ABC):
     def get_parent(self):
         pass
 
-    @abc.abstractmethod
     def get_root(self):
         pass
 
-    @abc.abstractmethod
     def is_leaf(self):
         return True
 
 
 # 透明方式
 class Node(CompositeBase):
+    def get_parent(self):
+        pass
+
+    def get_root(self):
+        pass
+
+    def is_leaf(self):
+        return False
+
     def add_child(self, composite):
         pass
 
@@ -35,7 +41,15 @@ class Node(CompositeBase):
         pass
 
 
-# 安全方式
-class Node
+class Leaf(CompositeBase):
+    def get_parent(self):
+        pass
+
+    def get_root(self):
+        pass
+
+    def is_leaf(self):
+        return True
+
 
 
